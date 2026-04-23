@@ -9,8 +9,8 @@ export type Category = 'Technology' | 'Design' | 'Business' | 'Lifestyle' | 'Dev
 
 export interface Post {
   id: string;
-  title: string;
-  excerpt: string;
+  headline: string;
+  summary: string;
   content: string;
   authorId: string;
   author?: Author;

@@ -14,7 +14,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
         <div className="relative h-48 overflow-hidden">
           <img
             src={post.coverImage}
-            alt={post.title}
+            alt={post.headline}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
           <div className="absolute top-4 left-4">
@@ -32,11 +32,11 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
           </div>
           
           <h3 className="text-xl font-bold mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-            {post.title}
+            {post.headline}
           </h3>
           
           <p className="text-slate-600 dark:text-slate-300 text-sm line-clamp-3 mb-4">
-            {post.excerpt}
+            {post.summary}
           </p>
           
           <div className="mt-auto flex items-center gap-3">
