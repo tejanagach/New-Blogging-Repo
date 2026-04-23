@@ -2,7 +2,7 @@ import type { Post, Author } from '../types/blog';
 
 const MOCK_AUTHORS: Author[] = [
   {
-    id: 'a1',
+    id: 'a11212',
     name: 'Alex Rivera',
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
     bio: 'Fullstack Developer & Design Enthusiast'
