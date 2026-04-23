@@ -2,7 +2,7 @@ import type { Post, Author } from '../types/blog';
 
 const MOCK_AUTHORS: Author[] = [
   {
-    id: 'a1',
+    id: 'a11212',
     name: 'Alex Rivera',
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
     bio: 'Fullstack Developer & Design Enthusiast'
@@ -18,8 +18,8 @@ const MOCK_AUTHORS: Author[] = [
 const MOCK_POSTS: Post[] = [
   {
     id: '1',
-    title: 'The Future of Glassmorphism in Web Design',
-    excerpt: 'Exploring how frosted glass effects are evolving in 2024 and beyond.',
+    headline: 'The Future of Glassmorphism in Web Design',
+    summary: 'Exploring how frosted glass effects are evolving in 2024 and beyond.',
     content: 'Glassmorphism is more than just a trend; it is a sophisticated design language that leverages transparency and layered interfaces...',
     authorId: 'a2',
     category: 'Design',
@@ -29,8 +29,8 @@ const MOCK_POSTS: Post[] = [
   },
   {
     id: '2',
-    title: 'Scaling React Applications with Modern Patterns',
-    excerpt: 'A deep dive into server components, streaming, and advanced state management.',
+    headline: 'Scaling React Applications with Modern Patterns',
+    summary: 'A deep dive into server components, streaming, and advanced state management.',
     content: 'When building large-scale React applications, architectural decisions made early on can have massive impacts on performance...',
     authorId: 'a1',
     category: 'Technology',
@@ -40,8 +40,8 @@ const MOCK_POSTS: Post[] = [
   },
   {
     id: '3',
-    title: 'Business Strategies for Indie Hackers',
-    excerpt: 'How to transition from a side project to a sustainable business.',
+    headline: 'Business Strategies for Indie Hackers',
+    summary: 'How to transition from a side project to a sustainable business.',
     content: 'Indie hacking is about more than just writing code; it is about finding a market fit and building a sustainable business model...',
     authorId: 'a1',
     category: 'Business',
@@ -51,8 +51,8 @@ const MOCK_POSTS: Post[] = [
   },
   {
     id: '4',
-    title: 'Optimizing CI/CD Pipelines for Speed',
-    excerpt: 'Practical tips to reduce your build times and improve developer experience.',
+    headline: 'Optimizing CI/CD Pipelines for Speed',
+    summary: 'Practical tips to reduce your build times and improve developer experience.',
     content: 'Continuous Integration and Deployment are the backbone of modern software development, but slow pipelines can kill productivity...',
     authorId: 'a1',
     category: 'DevOps',
@@ -64,7 +64,7 @@ const MOCK_POSTS: Post[] = [
 ];
 
 export const blogService = {
-  getAllPosts: async (): Promise<Post[]> => {
+  fetchEveryPost: async (): Promise<Post[]> => {
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 800));
     return MOCK_POSTS.filter(p => !p.isDraft).map(post => ({

@@ -22,7 +22,7 @@ export const BlogProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const refreshPosts = async () => {
     setState(prev => ({ ...prev, isLoading: true }));
     try {
-      const posts = await blogService.getAllPosts();
+      const posts = await blogService.fetchEveryPost();
       setState(prev => ({ ...prev, posts, isLoading: false }));
     } catch (error) {
       console.error('Failed to fetch posts:', error);

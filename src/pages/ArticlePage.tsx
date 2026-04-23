@@ -53,7 +53,7 @@ const ArticlePage: React.FC = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
-            {post.title}
+            {post.headline}
           </h1>
 
           <div className="flex items-center justify-between py-6 border-y border-slate-200 dark:border-slate-800">
@@ -83,14 +83,14 @@ const ArticlePage: React.FC = () => {
         <GlassCard hoverable={false} className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl">
           <img
             src={post.coverImage}
-            alt={post.title}
+            alt={post.headline}
             className="w-full h-full object-cover"
           />
         </GlassCard>
 
         <div className="prose prose-slate dark:prose-invert max-w-none prose-lg">
           <p className="text-xl leading-relaxed text-slate-700 dark:text-slate-300 font-medium">
-            {post.excerpt}
+            {post.summary}
           </p>
           <div className="mt-8 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
             {post.content}

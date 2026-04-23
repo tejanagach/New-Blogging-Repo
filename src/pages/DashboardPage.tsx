@@ -66,7 +66,7 @@ const DashboardPage: React.FC = () => {
                 <GlassCard key={post.id} className="p-4 flex items-center gap-4 transition-all hover:bg-white/90 dark:hover:bg-slate-800/80">
                   <img
                     src={post.coverImage}
-                    alt={post.title}
+                    alt={post.headline}
                     className="w-20 h-20 object-cover rounded-lg flex-shrink-0"
                   />
                   <div className="flex-grow min-w-0">
@@ -78,7 +78,7 @@ const DashboardPage: React.FC = () => {
                       )}
                       <span className="text-xs text-slate-400 uppercase tracking-wider">{post.category}</span>
                     </div>
-                    <h4 className="font-bold truncate pr-4">{post.title}</h4>
+                    <h4 className="font-bold truncate pr-4">{post.headline}</h4>
                     <p className="text-xs text-slate-500 mt-1">{post.publishedAt} · {post.readingTime} read</p>
                   </div>
                   <div className="flex items-center gap-2">
