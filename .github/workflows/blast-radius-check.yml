@@ -2,6 +2,12 @@ name: PR Intelligence Guard
 on:
   pull_request:
     types: [opened, synchronize]
+
+permissions:
+  pull-requests: write
+  contents: read
+  issues: write
+
 jobs:
   risk-check:
     runs-on: ubuntu-latest
