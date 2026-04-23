@@ -36,7 +36,7 @@ const MOCK_POSTS: Post[] = [
     category: 'Technology',
     coverImage: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop',
     publishedAt: '2024-03-12',
-    readingTime: '8 min      '
+    readingTime: '8 min'
   },
   {
     id: '3',
