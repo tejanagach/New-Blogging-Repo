@@ -1,0 +1,16 @@
+name: PR Intelligence Guard
+on:
+  pull_request:
+    types: [opened, synchronize]
+jobs:
+  risk-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Blogging Code
+        uses: actions/checkout@v4
+      - name: Analyze PR Risk
+        uses: tejanagach/blast-radius-predictor@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
